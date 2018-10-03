@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Menu resp</title>
+        <style>
+            body {margin:0 auto;width:100%;}
+            * {
+                box-sizing: border-box; 
+                outline: none;
+            }
+
+            a { text-decoration: none;color:rgb(0, 0, 0);padding: 8px;background-color:#cecece;}
+            ul{ margin: 0; padding: 0;display: flex;}
+            li{ list-style: none}
+
+            /* div, label{
+                visibility: hidden;
+            }
+            label:checked ~div{
+                visibility: visible;
+            } */
+           
+           nav {
+               display: flex;
+               align-items: center;
+               justify-content:center;
+           }
+
+           nav img {
+               width: 50px;
+               height: 50px;
+           }
+
+           input, label {
+                   display: none;
+               }
+
+            ul div {
+                display: none;
+            }
+           
+           @media only screen and (max-width: 990px) {
+               nav,a {
+                    display: block;
+                    width: 100%;
+                    text-align: center;
+               }
+               li:nth-of-type(1):hover ~ div:nth-of-type(1){
+                   display: block;
+               }
+               li:nth-of-type(2):hover ~ div:nth-of-type(2){
+                   display: block;
+               }
+               li:nth-of-type(3):hover ~ div:nth-of-type(3){
+                   display: block;
+               }
+               li:nth-of-type(4):hover ~ div:nth-of-type(4){
+                   display: block;
+               }
+               li:nth-of-type(5):hover ~ div:nth-of-type(5){
+                   display: block;
+               }
+
+               img {
+                   float: left;
+               }
+               a {
+                    border-bottom: 1px solid black;
+                    
+               }
+               li:nth-of-type(5) a{
+                border-bottom: 0;
+               }
+               ul {
+                   flex-direction: column;
+                   visibility: hidden;
+                   text-align: center;
+                   clear: both;
+               }
+
+               input:checked ~ul{
+                    visibility: visible;
+               }
+               label {
+                   visibility: visible;
+                   float: right;
+                   display: block;
+               }
+           }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <img src="avatar.jpg" />
+            <input type="checkbox" id="ckckbx"/>
+            <label for ="ckckbx">Menu cliquable</label>
+            <ul>
+                <li><a href="#">Présentation</a></li>
+                <div>Ma présentation</div>
+                <li><a href="#">Compétences</a></li>
+                <div>Mes compétences</div>
+                <li><a href="#">Projets</a></li>
+                <div>Mes projets</div>
+                <li><a href="#">CV</a></li>
+                <div>Mon CV</div>
+                <li><a href="#">Contact</a></li>
+                <div>Me contacter</div>
+            </ul>
+        </nav>
+    </body>
+</html>

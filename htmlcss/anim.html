@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <style type="text/css">  
+            body {
+                margin:0;
+            }
+
+            * {
+                box-sizing: border-box; 
+                outline: none;
+            }
+
+            a { text-decoration: none;}
+            ul{ margin: 0; padding: 0}
+            li{ list-style: none}
+
+            .carre {
+                background-color:gray;
+                display:inline-block;
+                height:150px;
+                margin:150px;
+                position:relative;
+                width:150px;
+
+                -webkit-animation:change-moveleft-bgcolor 4s ease-in-out infinite alternate;
+                -moz-animation:change-moveleft-bgcolor 4s ease-in-out infinite alternate;
+                -ms-animation:change-moveleft-bgcolor 4s ease-in-out infinite alternate;
+                -o-animation:change-moveleft-bgcolor 4s ease-in-out infinite alternate;
+                animation:change-moveleft-bgcolor 4s ease-in-out infinite alternate;
+            }
+            .carre:hover {
+                -webkit-animation-play-state:paused;
+                -moz-animation-play-state:paused;
+                -ms-animation-play-state:paused;
+                -o-animation-play-state:paused;
+                animation-play-state:paused; /* running | paused */
+            }
+
+            @keyframes change-moveleft-bgcolor {
+                0% {
+                    background-color:lightblue;
+                    left:0;
+                    transform: rotatez(0deg);
+                    border-radius: 0px;
+                }
+                
+                20% {
+                    transform: rotatez(45deg);
+                    border-radius: 100px 0px 0px 0px;
+                    left:100px;
+                }
+                30% {
+                    transform: rotatez(45deg);
+                    border-radius: 100px 0px 0px 0px;
+                    left:100px;
+                }
+
+                45%{
+                    transform: rotatez(0deg);
+                    border-radius: 0px 100px 100px 0px;
+                    left:200px;
+                }
+                55%{
+                    transform: rotatez(0deg);
+                    border-radius: 0px 100px 100px 0px;
+                    left:200px;
+                }
+
+                70% {
+                    transform: rotatez(45deg);
+                    border-radius: 0px 100px 100px 100px;
+                    left:300px;
+                }
+                80% {
+                    transform: rotatez(45deg);
+                    border-radius: 0px 100px 100px 100px;
+                    left:300px;
+                }
+
+                100% {
+                    transform: rotatez(0deg);
+                    background-color:lightgreen;
+                    left:400px;
+                    border-radius: 100px;
+                }
+            }
+
+
+            .ciel {
+                height:400px;
+                margin:150px;
+                position:relative;
+                width:1500px;
+                animation:ciel-bgcolor 50s ease-in-out infinite alternate;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                overflow: hidden;
+                opacity: 1;
+                background-color:#000;
+            }
+
+            @keyframes ciel-bgcolor {
+                30%{
+                    background-color:#000;
+                }
+                50%{
+                    
+                    background-color:#007fd5;
+                }
+                70%{
+                    background-color:#000;
+                }
+            }
+
+            .lune {
+                
+                background: url('img/moon.png') no-repeat center;
+                height: 295px;
+                position:relative;
+                width: 296px;
+                animation:lune-anim 50s ease-in-out infinite alternate;
+            }
+
+            @keyframes lune-anim {
+                0% {
+                    left:1530px;
+                    background-size: 75%;
+                    opacity: 1;
+                }
+
+                30% {
+                    opacity: 0.9;
+                }
+                
+                50%{
+                    background-size: 50%;
+                    opacity: 0.2;
+                }
+
+                70% {
+                    opacity: 0.9;
+                }
+
+                100% {
+                    left:-300px;
+                    background-size: 75%;
+                    opacity:1;
+                }
+            }
+            
+            .nuage {
+                width: 1477px;
+                height: 499px;
+                left:1500px;
+            }
+
+            #nuage1 {
+                background: url('img/cloud_one.png') no-repeat center;
+                position:absolute;
+                animation:nuage1-anim 50s ease-in-out infinite alternate;
+            }
+
+            @keyframes nuage1-anim {
+                from {
+                    left:1430px;
+                }
+                to {
+                    left:-1600px;
+                }
+            }
+
+            #nuage2 {
+                background: url('img/cloud_two.png') no-repeat center;
+                position:absolute;
+                animation:nuage2-anim 40s ease-in-out infinite alternate;
+                animation-delay:10s;
+            }
+
+            @keyframes nuage2-anim {
+                from {
+                    left:1430px;
+                }
+                to {
+                    left:-1200px;
+                }
+            }
+
+            #nuage3 {
+                background: url('img/cloud_three.png') no-repeat center;
+                position:absolute;
+                animation:nuage3-anim 33s ease-in-out infinite alternate;
+                animation-delay:17s;
+            }
+
+            @keyframes nuage3-anim {
+                from {
+                    left:1430px;
+                }
+                to {
+                    left:-600px;
+                }
+            }
+
+
+
+            .ciel0 {
+                background-color:#007fd5;
+                height:400px;
+                margin:150px;
+                position:relative;
+                width:1500px;
+                animation:ciel-bgcolor0 50s ease-in-out infinite alternate;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                overflow: hidden;
+                opacity: 1;
+            }
+
+            @keyframes ciel-bgcolor0 {
+                30%{
+                    background-color:#007fd5;
+                }
+                50%{
+                    background-color:#000;
+                }
+                70%{
+                    background-color:#007fd5;
+                }
+            }
+
+            .lune0 {
+                
+                background: url('img/moon.png') no-repeat center;
+                height: 295px;
+                position:relative;
+                width: 296px;
+                animation:lune-anim0 50s ease-in-out infinite alternate;
+            }
+
+            @keyframes lune-anim0 {
+                0% {
+                    left:1430px;
+                    background-size: 50%;
+                    opacity: 0;
+                }
+
+                30%{
+                    opacity: 0.3;
+                }
+                40% {
+                    opacity:1;
+                    background-size: 60%;
+                }
+                45% {
+                    opacity:1;
+                }
+                50%{
+                    background-size: 75%;
+                    opacity: 1;
+                }
+                55% {
+                    opacity:1;
+                    z-index: 0;
+                }
+                60% {
+                    opacity:1;
+                    background-size: 60%;
+                }
+                70% {
+                    opacity: 0.3;
+                    
+                }
+
+                100% {
+                    left:-300px;
+                    background-size: 50%;
+                    opacity: 0;
+                }
+            }
+            
+            .nuage0 {
+                width: 1477px;
+                height: 499px;
+                left:1500px;
+            }
+
+            #nuage10 {
+                background: url('img/cloud_one.png') no-repeat center;
+                position:absolute;
+                animation:nuage1-anim0 50s ease-in-out infinite alternate;
+            }
+
+            @keyframes nuage1-anim0 {
+                from {
+                    left:1430px;
+                }
+                to {
+                    left:-1600px;
+                }
+            }
+
+            #nuage20 {
+                background: url('img/cloud_two.png') no-repeat center;
+                position:absolute;
+                animation:nuage2-anim0 40s ease-in-out infinite alternate;
+                animation-delay:10s;
+            }
+
+            @keyframes nuage2-anim0 {
+                from {
+                    left:1430px;
+                }
+                to {
+                    left:-1200px;
+                }
+            }
+
+            #nuage30 {
+                background: url('img/cloud_three.png') no-repeat center;
+                position:absolute;
+                animation:nuage3-anim0 33s ease-in-out infinite alternate;
+                animation-delay:17s;
+            }
+
+            @keyframes nuage3-anim0 {
+                from {
+                    left:1430px;
+                }
+                to {
+                    left:-600px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="carre"></div>
+
+        <div class="ciel">
+
+            <div class="lune"></div>
+            <div class="nuage"  id="nuage1"></div>
+            
+            <div class="nuage"  id="nuage2"></div>
+            <div class="nuage" id="nuage3"></div>
+            
+        </div>
+
+
+        <div class="ciel0">
+                <div class="lune0"></div>
+            
+                <div class="nuage0"  id="nuage10"></div>
+                <div class="nuage0"  id="nuage20"></div>
+                
+                <div class="nuage0" id="nuage30"></div>
+                
+            </div>
+    </body>
+</html>

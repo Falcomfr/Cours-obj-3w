@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Transform</title>
+        <style>
+            body {margin:0;}
+            * {
+                box-sizing: border-box; 
+          
+            }
+
+            a { text-decoration: none;}
+            ul{ margin: 0; padding: 0;}
+            li{ list-style: none}
+
+            .martin {
+                height: 250px;
+                width: 130px;
+                background-color: brown;
+                transition-delay: 4s;
+                transition-duration: 1s;
+                transition-timing-function: linear;
+                transform-origin:0 0; 
+                text-align: center;
+                padding-top:50px;
+            }
+
+
+            .adr {
+    
+                border: 3px solid black;
+                height: 256px;
+                width: 136px;margin: 0 auto;
+                perspective: 500px; 
+                
+            }
+
+            .adr:hover .martin{
+                transition-delay: 2s;
+                transition-duration: 4s;
+                transform:rotateY(-180deg);
+                transition-timing-function:cubic-bezier(.93,1.15,0,.15);  
+            }
+
+            .region{
+                overflow: hidden;
+                width: 380px;
+                height: 380px;
+                
+            }
+
+            .region img {
+                transition:transform 0.3s ease;
+                margin-top: 110px;
+            }
+            .region img:hover {
+                transform:translate(0,-110px);
+            }
+
+            #carte {
+                width: 160px;
+                height: 250px;
+                background-color:burlywood;
+                margin-top: 80px;
+                margin: 0 auto;
+                transition:transform 2s ease;
+                text-align: center; 
+                transform-style: preserve-3d;
+                margin: 90px;
+                border: 2px solid rgb(179, 148, 108);
+                font-size: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-left: 20px;
+                
+            }
+            #carte:hover {
+                transform:translateZ(-200px) rotatey(180deg) ;
+                
+            }
+            
+            #front {
+                backface-visibility:hidden;
+                color:#fff;
+                transform: rotateY(0deg);
+            
+            }
+
+            #back {
+                backface-visibility:hidden;
+                transform: rotateY(180deg);
+                padding-left: 20px;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        
+        <div class="adr">
+            <div class="martin">Chez roger</div>
+        </div>
+       
+
+        <div class="region"><img src="region.jpg"/></div>
+
+<div style="perspective:400px;">
+            <div id="carte">
+                <div id="front">1</div>
+                <div id="back">2</div>
+            </div>
+        </div>
+    </body>
+</html>

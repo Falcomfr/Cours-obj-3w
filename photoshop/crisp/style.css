@@ -1,0 +1,121 @@
+body {
+    margin:0 auto;
+    background-color: #fff;
+    font-family: arial;
+}
+
+
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+@font-face {
+	font-family: "romeral";
+	src: url('romeral.otf');
+}
+
+h1 {
+    font-size: 14.7px;
+    font-family: romeral, Verdana, Geneva, Tahoma, sans-serif;
+    float: left;
+    margin-top: 40px;
+}
+
+header {
+    height: 150px;
+}
+
+.topBan {
+    background: url("img/top.png") repeat;
+    height: 25px;
+    width: 100%;
+}
+
+nav {
+    margin:0 auto;
+    padding: 32px 0 32px 0;
+    height: 50%;
+    width: 70%;
+}
+
+nav img {
+    float: left;
+}
+
+nav div {
+   
+    width: 55%;
+    border: 1px solid #ded5cf;
+    background-image:linear-gradient(#f0edd9,#f2f1e4);
+    border-radius: 5px;
+    float: right;
+    text-align: center;
+    overflow: hidden;
+}
+
+nav a {
+    text-shadow: 2px 2px 1px white;
+    color: #491701;
+    padding: 2.5% 7% 2.5% 7%;
+    border-right: 1px solid #d8d8d7;
+    border-left: 1px solid #fefefe;
+    font-size: 17px;
+    font-weight: bold;
+    display:inline-block;
+}
+
+nav a:first-child {
+    color: #d17b00;
+    border-left: none;
+}
+
+nav a:last-child {
+    border-right: none;
+}
+
+
+.slider {
+    margin: 20px auto;
+    height: 200px;
+    width: 100%;
+    background-color:#e3decf;
+    padding-left: 10%;
+    color: #7f5d49;
+}
+
+.slider div:first-child{
+    line-height: 230px;
+    width: 5%;
+    float: left;
+   
+}
+
+.slider div:nth-of-type(2){
+    float: left;
+    width: 70%;
+    height: 70%;
+    
+}
+
+.slider p{
+    font-size: 14px;
+    font-weight: normal;
+    width: 70%;
+    float: left;
+   
+}
+
+.slider div:nth-of-type(2) img {
+    float: right;
+    margin-top: 20px;
+   
+}
+
+.slider div:last-child {
+    line-height: 230px;
+    width: 5%;
+    float: left;
+}
+

@@ -1,0 +1,15 @@
+body {
+    margin:0 auto;
+    background-color:#c70477;
+    width: 100%;
+}
+
+header {
+    width: 60%;
+    border: 1px solid black;
+
+}
+
+header span{
+    color: #fff;
+}

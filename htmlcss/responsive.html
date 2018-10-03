@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <style type="text/css">   
+
+            body {
+                margin:0;
+                font-family: arial;
+            }
+
+            * {
+                box-sizing: border-box; 
+                outline: none;
+            }
+
+            img {
+                width: 100%;
+                min-width: 150px;
+            }
+
+            main {
+                display: flex;
+                flex-direction: row;
+                flex-wrap:wrap;
+            }
+            
+            main article {
+                border: 1px solid #000;
+                display: flex;
+                align-items: flex-start;
+                width: 33.3%;
+            }
+            article img {
+               flex: 1;
+            }
+            article p {
+               flex: 2;
+               padding: 3px;
+            }
+
+            @media only screen and (max-width: 768px) {
+                main article {
+                    display: initial;
+                    width: 50%;
+                }
+             }
+             @media only screen and (max-width: 480px) {
+                main {
+                    flex-direction: column;
+                }
+
+                main article {
+                    display: initial;
+                    width: 100%;
+                }
+             }
+            
+        </style>
+    </head>
+    <body>
+    
+        <main>
+            <article><img src="avatar_webuser150.jpg" /><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus laboriosam cupiditate, sapiente natus obcaecati velit odio sequi iste, corrupti perspiciatis tempora? Maiores, sunt corporis? Sunt commodi minima inventore laborum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta facilis maiores vitae, incidunt blanditiis minima sit, aspernatur, fuga illo nisi minus? Vero omnis perferendis quisquam perspiciatis minima dignissimos libero cumque?Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus ipsum earum provident recusandae tempore nisi adipisci in quisquam alias sapiente ullam sit blanditiis, hic consequatur accusamus pariatur repudiandae libero magni!</p></article>
+            <article><img src="avatar_webuser150.jpg" /><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus laboriosam cupiditate, sapiente natus obcaecati velit odio sequi iste, corrupti perspiciatis tempora?</p></article>
+            <article><img src="avatar_webuser150.jpg" /><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus laboriosam cupiditate, sapiente natus obcaecati velit odio sequi iste, corrupti perspiciatis tempora? Maiores, sunt corporis? Sunt commodi minima inventore laborum.</p></article>
+            <article><img src="avatar_webuser150.jpg" /><p>io sequi iste, corrupti perspiciatis tempora? Maiores, sunt corporis? Sunt commodi minima inventore laborum.</p></article>
+            <article><img src="avatar_webuser150.jpg" /><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, facere sapiente assumenda ad nostrum officiis tenetur esse quia incidunt iure repellendus a facilis accusamus in odio sunt. Rem, deleniti ad!Lorem lorem Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, ea perferendis omnis temporibus odio dolores repellat unde dignissimos, asperiores quo quasi molestias culpa? Ut autem beatae, delectus temporibus expedita molestias. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus laboriosam cupiditate, sapiente natus obcaecati velit odio sequi iste, corrupti perspiciatis tempora? Maiores, sunt corporis? Sunt commodi minima inventore laborum.</p></article>
+            <article><img src="avatar_webuser150.jpg" /><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus laboriosam cupiditate, sapiente natus obcaecati velit odio sequi iste, corrupti perspiciatis tempora? Maiores, sunt corporis? Sunt commodi minima inventore laborum.</p></article>
+            <article><img src="avatar_webuser150.jpg" /><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus laboriosam cupiditate, sapiente natus obcaecati velit odio sequi iste, corrupti perspiciatis tempora? Maiores, sunt corporis? Sunt commodi minima inventore laborum.</p></article>
+            <article><img src="avatar_webuser150.jpg" /><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus laboriosam cupiditate, sapiente natus obcaecati velit odio sequi iste, corrupti perspiciatis tempora? Maiores, sunt corporis? Sunt commodi minima inventore laborum.</p></article>
+            <article><img src="avatar_webuser150.jpg" /><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem minus laboriosam cupiditate, sapiente natus obcaecati velit odio sequi iste, corrupti perspiciatis tempora? Maiores, sunt corporis? Sunt commodi minima inventore laborum.</p></article>
+        </main>
+
+    </body>
+</html>

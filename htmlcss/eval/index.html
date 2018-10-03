@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>x20.2</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet"> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,700" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+        <style>
+            body {
+                margin:0;
+                color: #fff;
+                font-family: 'Cabin', sans-serif;
+                background-image: url("img/bg.jpg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-color: #fff;
+            }
+
+            * {
+                box-sizing: border-box; 
+                outline: none;
+            }
+
+            a { text-decoration: none;color:#fff;}
+            ul{ margin: 0; padding: 0}
+            li{ list-style: none}
+            section {color:#726a84;}
+            
+            h2 {color:#7653c0;font-size: 2em;}
+
+            #logo {
+                margin: 2% 0 0 8%;
+            }
+
+            #head {
+                display: grid;
+                grid-template-columns: 40% 42% 8%;
+            }
+
+            #head ul {
+                display: flex;
+                flex-direction: row;
+                padding: 4%;
+            }
+            #head li {
+                padding: 1%;
+            }
+
+            #head a {
+                border:0;
+            }
+
+            #head div {
+                margin: 10% 0 0 30%;
+                padding: 8%;                
+            }
+            #head div h1{
+                font-size: 60px;
+                margin: 40% 0 0 10%;
+                white-space: nowrap; 
+            }
+            #head div span:nth-of-type(2) {
+                white-space: nowrap; 
+            }
+            #head div span:nth-of-type(1) {
+                font-size: 22em;
+                display: block;
+                font-weight: bold;
+                position: absolute;
+                z-index:-1;
+                color: #7a63e9;
+            }
+            #head div input {
+                margin: 25% 0 0 3%;
+            }
+            #head div input:nth-of-type(1) {
+                border-radius: 30px;
+                border: 0;
+                height: 8%;
+                width: 40%;
+                background-color: #9572e8;
+                color: #bca9f0;
+            }
+            #head div input:nth-of-type(2) {
+                border-radius: 30px 30px 30px 0;
+                border: 0;
+                height: 8%;
+                width: 30%;
+                background-color: #fb397d;
+                color: #fff;
+            }
+
+            #signUp {
+                margin: 15% 0 0 0;
+                border: 1px solid #a883e9;
+                text-align: center;
+                padding: 10%;
+                height: 50Px;
+                border-radius: 20px 20px 20px 0;
+            }
+            #tel{
+                grid-column: 2 / span 2;
+                width: 100%;
+                padding-left: 13%;
+            }
+            #why {
+                text-align: center;
+                font-size: 2em;
+                margin-top: 8em;
+                grid-gap: 1%;
+                display: grid;
+                grid-template-columns: 20% 20% 20% 20% 20%;
+            }
+            .h2{
+                grid-column: 2 / span 3;
+                margin:0;
+            }
+            .h2hr {
+                width: 6%;
+                border: none;
+                height: 2px;
+                border: 0;
+                background-color:#fb397d;
+                grid-column: 2 / span 3;
+            }
+            #why article {
+                border: 1px solid #eff2f6;
+                border-radius: 15px 15px 15px 0;
+            }
+            #why article:nth-of-type(1) {
+                grid-column: 2;
+            }
+            #why article:nth-of-type(2) {
+                grid-column: 3;
+            }
+            #why article:nth-of-type(3) {
+                grid-column: 4;
+            }
+            #why h3 {
+                font-size: 26px;
+                color:#7653c0;
+            }
+            #why p {
+                font-size: 16px;
+            }
+
+            #phone {
+                display:grid;
+                grid-template-columns: 20% 30% 30% 20%;
+            }
+            #phone img{
+                grid-column: 2;
+                margin-top:2%;
+                width: 100%;
+            }
+            #phone article{
+                grid-column: 3;
+                padding: 10%;
+            }
+            #phone article h2{
+                font-size: 3em;
+                font-weight: 400;
+            }
+            #phone article a {
+                color:#726a84;
+                border: 1px solid #dddddd;
+                width: 182px;
+                text-align: center;
+                border-radius: 15px 15px 15px 0;
+                padding: 2%;
+                margin: 1%;
+            }
+            #phone article div {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #awesome {
+                font-size: 2em;
+                display: grid;
+                grid-gap: 1%;
+                grid-template-columns: 20% 20% 20% 20% 20%;
+            }
+            #awesome i{
+                float:left;
+                padding: 7% 5% 0 10%;
+                color:#fb397d;
+            }
+            #awesome hr,h2 {
+                text-align: center;
+            }
+            #awesome h3 {
+                white-space: nowrap; 
+                font-size: 0.8em;
+                font-weight: 400;
+            }
+            #awesome p {
+                font-size: 0.5em;
+            }
+
+            #awesome article:nth-of-type(1){
+                grid-column: 2;
+            }
+            #awesome article:nth-of-type(2){
+                grid-column: 3;
+            }
+            #awesome article:nth-of-type(3){
+                grid-column: 4;
+            }
+            #awesome article:nth-of-type(4){
+                grid-column: 2;
+            }
+            #awesome article:nth-of-type(5){
+                grid-column: 3;
+            }
+            #awesome article:nth-of-type(6){
+                grid-column: 4;
+            }
+            #vid {
+                text-align: center;
+                
+            }
+            #vid video {
+                border: 20px solid #fff;
+                border-radius: 20px;
+                box-shadow: 0px 0px 5px 3px #bcbcbc;
+                margin-top: 1%;
+            }
+            
+            #stats {
+                height: 300px;
+                background-image:linear-gradient(to right,#a865e1, #7873ed);
+                margin-top: -4%;
+                display: grid;
+                grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+                grid-template-rows: 50% 50%;
+                color: #fff;
+                
+            }
+            
+            #stats div {
+                grid-row: 2;
+                display: flex;
+                justify-content: center;
+            }
+            #stats span {
+                font-size: 50px;
+                float: left;
+                height: 100%;   
+                clear:both;
+            }
+
+            
+            #stats div:nth-of-type(1) {
+                grid-column: 2;
+            }
+            #stats div:nth-of-type(2) {
+                grid-column: 3;
+            }
+            #stats div:nth-of-type(3) {
+                grid-column: 4;
+            }
+            #stats div:nth-of-type(4) {
+                grid-column: 5;
+            }
+
+            #pricing {
+                margin-top: 5%;
+                background-color: #f5f9fc;
+                font-size: 2em;
+                display: grid;
+                grid-template-columns: 18.6% 15.6% 15.6% 15.6% 15.6% 18.6%;
+                padding-bottom: 5%;
+            }
+            #pricing hr {
+                grid-column: 2 / span 4;
+            }
+            #pricing  h2 {
+                grid-column: 2 / span 4;
+            }
+            #pricing article {
+                border: 1px solid #ebebeb;
+                border-radius: 15px 15px 15px 0;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                background-color: #fff;
+                font-size: 18px;
+            }
+            #pricing article:nth-of-type(1) {
+                grid-column: 2;
+            }
+            #pricing article:nth-of-type(2) {
+                grid-column: 3;
+            }
+            #pricing article:nth-of-type(3) {
+                grid-column: 4;
+            }
+            #pricing article:nth-of-type(4) {
+                grid-column: 5;
+            }
+            #pricing header {
+                
+                padding: 10% 0 10% 0;
+            }
+            #pricing h3{
+                margin: 0;
+                color:#8060c5;
+                font-weight: 300;
+                font-size: 20px;
+            }
+
+            #pricing header div {
+                color: #fb397d;
+                font-size: 50px;
+                border:0;
+            }
+            #pricing div,a {
+                border-top: 1px solid #ebebeb;
+                padding: 4% 0 4% 0;
+            }
+
+            #pricing a {
+                padding: 6% 0 6% 0;
+                background-color:#726a84;
+                border-bottom-right-radius: 15px;
+            }
+           
+            a#pricingColor {
+                background-color:#a865e1;
+            }
+            
+            #team {
+                background-color:#fff;
+                margin-top: 5%;
+                display: grid;
+                grid-template-columns: 25% 50% 25%;
+               
+            }
+            #team img{
+                grid-column: 2;
+                margin: 0 auto;
+            }
+            
+            #team span {
+                font-size: 1.5em;
+                grid-column: 2;
+                text-align: center
+            }
+        </style>
+    </head>
+    <body>
+        <header id="head">
+            <img src="img/logo.png" id="logo"/>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Screenshot</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Testimonials</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" id="signUp">Sign Up Free</a>
+            <div>
+                <span>C</span>
+                <h1>Colorlib app</h1>
+                <span>Everything You Need. To Start Selling Online Beautifully</span>
+                <input type="text" name="" value="name@compagny.com" id="">
+                <input type="submit" value="Get Started">
+            </div>
+            <img id="tel" src="img/tel.png">
+        </header>
+        <section id="why">
+            <h2 class="h2">Why Is It Special</h2>
+            <hr class="h2hr">
+
+            <article>
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Easy to use</h3>
+                <p>We build pretty complex tools and this allows us to take designs and turn them into functional quickly and easily</p>
+            </article>
+            <article>
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Powerful Design</h3>
+                <p>We build pretty complex tools and this allows us to take designs and turn them into functional quickly and easily</p>
+
+            </article>
+            <article>
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Customizability</h3>
+                <p>We build pretty complex tools and this allows us to take designs and turn them into functional quickly and easily</p>
+            </article>
+        </section>
+
+        <section id="phone">
+            <img src="img/screencapture.png"/>
+            <article>
+                <h2>Our Best Propositions for You!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo est doloribus error praesentium. Nostrum, voluptate dicta. Consequatur, ducimus! Ad nisi soluta quae saepe ex pariatur reprehenderit dolor suscipit tenetur sint?</p>
+                <div>
+                    <a href="#"><i class="fas fa-mobile-alt"></i> available on <br/><span>Google Store</span></a>
+                    <a href="#"><i class="fas fa-mobile-alt"></i> available on <br/><span>Apple Store</span></a>
+                </div>
+            </article>
+        </section>
+        <section id="awesome">
+            <h2 class="h2">Awesome Features</h2>
+            <hr class="h2hr">
+            <article>
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Awesome Experience</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, suscipit aliquam voluptatibus magnam quia totam architecto laudantium minima. Tenetur aperiam quo modi illum temporibus quia voluptate adipisci minima animi nobis.</p>
+            </article>
+            <article>
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Fast and Simple</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, suscipit aliquam voluptatibus magnam quia totam architecto laudantium minima. Tenetur aperiam quo modi illum temporibus quia voluptate adipisci minima animi nobis.</p>
+            </article>
+            <article>
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Clean Code</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, suscipit aliquam voluptatibus magnam quia totam architecto laudantium minima. Tenetur aperiam quo modi illum temporibus quia voluptate adipisci minima animi nobis.</p>
+            </article>
+            <article>
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Perfect Design</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, suscipit aliquam voluptatibus magnam quia totam architecto laudantium minima. Tenetur aperiam quo modi illum temporibus quia voluptate adipisci minima animi nobis.</p>
+            </article>
+            <article>
+                <i class="fas fa-mobile-alt"></i>
+                <h3>Best Industry Leader</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, suscipit aliquam voluptatibus magnam quia totam architecto laudantium minima. Tenetur aperiam quo modi illum temporibus quia voluptate adipisci minima animi nobis.</p>
+            </article>
+            <article>
+                <i class="fas fa-mobile-alt"></i>
+                <h3>24/7 Online Support</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, suscipit aliquam voluptatibus magnam quia totam architecto laudantium minima. Tenetur aperiam quo modi illum temporibus quia voluptate adipisci minima animi nobis.</p>
+            </article>
+        </section>
+
+        <section id="vid">
+            <video src="" controls poster="img/vid.jpg"><a href="#" class="play">Click me to play the video!</a></video>
+        </section>
+
+        <section id="stats">
+            <div>
+                <span>90</span>
+                <i class="fas fa-mobile-alt"></i>
+                APP <br/> DOWNLOADS
+            </div>
+            <div>
+                <span>120</span>
+                <i class="fas fa-mobile-alt"></i>
+                Happy <br/> Clients
+            </div>
+            <div>
+                <span>40</span>
+                <i class="fas fa-mobile-alt"></i>
+                ACTIVE <br/> ACCOUNTS
+            </div>
+            <div>
+                <span>10</span>
+                <i class="fas fa-mobile-alt"></i>
+                TOTAL <br/> APP RATES
+            </div>
+        </section>
+        
+        <section id="pricing">
+            <h2 class="h2">Pricing Plan</h2>
+            <hr class="h2hr">
+
+            <article>
+                <header>
+                    <h3>Starter Plan</h3>
+                    <div>$29</div>
+                </header>
+                <div>Up to 10 users monthly</div>
+                <div>Unlimited updates</div>
+                <div>Free host & domain</div>
+                <div>24/7 Support</div>
+                <div>10 Unique Users</div>
+                <a href="#">Select Plan</a>
+            </article>
+            <article>
+                <header>
+                    <h3>Basic Plan</h3>
+                    <div>$49</div>
+                </header>
+                <div>Up to 10 users monthly</div>
+                <div>Unlimited updates</div>
+                <div>Free host & domain</div>
+                <div>24/7 Support</div>
+                <div>10 Unique Users</div>
+                <a href="#">Select Plan</a>
+            </article>
+            <article>
+                <header style="background-color:#a865e1;">
+                    <h3 style="color:#fff;">Advanced Plan</h3>
+                    <div style="color:#fff;">$69</div>
+                </header>
+                <div>Up to 10 users monthly</div>
+                <div>Unlimited updates</div>
+                <div>Free host & domain</div>
+                <div>24/7 Support</div>
+                <div>10 Unique Users</div>
+                <a href="#" id="pricingColor">Select Plan</a>
+            </article>
+            <article>
+                <header>
+                    <h3>Community Plan</h3>
+                    <div>$99</div>
+                </header>
+                <div>Up to 10 users monthly</div>
+                <div>Unlimited updates</div>
+                <div>Free host & domain</div>
+                <div>24/7 Support</div>
+                <div>10 Unique Users</div>
+                <a href="#">Select Plan</a>
+            </article>
+            
+        </section>
+        <section id="team">
+            <img src="img/ok.png" /><br/>
+            <span>" I use Colorlib for usability testing. It's great for taking images and making clickable image prototypes that do the job and save me the coding time and just the general hassle of hosting."</span>
+            <img src="img/stars.png"/>
+            <span>Jennifer</span>
+            <span>Developer</span>
+        </section>
+
+    </body>
+</html>
